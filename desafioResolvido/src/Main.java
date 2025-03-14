@@ -1,5 +1,7 @@
 import java.util.Scanner;
 
+import static java.lang.Thread.sleep;
+
 public class Main {
     public static void main(String[] args) throws InterruptedException {
 
@@ -9,8 +11,7 @@ public class Main {
         double saldoIni = 1500.99;
         double saldoAtual = 0;
         String nome = "Reinaldo Alves de Oliveira";
-        double valortransferencia;
-        do {
+        while (opcao != 4) {
             System.out.println("************************************");
             System.out.println("Dados do Cliente:");
             System.out.println("Nome:           " + nome);
@@ -27,6 +28,7 @@ public class Main {
             if (saldoAtual == 0) {
                 saldoAtual = saldoIni;
             }
+            opcao = scanner.nextInt();
             switch (opcao){
                 case 1 -> System.out.println("Valor Atualizado: " + saldoAtual);
                 case 2 ->{
@@ -34,9 +36,25 @@ public class Main {
                     saldoAtual += scanner.nextDouble();
                     System.out.println("Valor atual é: " + saldoAtual);
                 }
+                case 3-> {
+                    System.out.println("Digite o valor a Transferir: ");
+                    double valortransferencia = scanner.nextDouble();
+                    if (valortransferencia > saldoAtual){
+                        System.out.println("Saldo insuficiente !!!");
+                    }else {
+                        saldoAtual -= valortransferencia;
+                        System.out.println("Saldo atual : " + saldoAtual);
+                    }
+                }
+                case 4-> {
+                    System.out.println("Sair");
+                    sleep(4000);
+                }
+                default -> System.out.println("Opção Invalida!!!");
             }
 
-        } while (opcao != 4);
+
+        };
 
 
     }
