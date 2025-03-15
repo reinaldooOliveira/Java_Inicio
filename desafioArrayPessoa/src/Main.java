@@ -6,16 +6,22 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         //1.
         Pessoa pessoa1 = new Pessoa();
-        pessoa1.setNome("Reinaldo");
-        pessoa1.setIdade(26);
+        System.out.println("Digite o Nome Pessoa 1: ");
+        pessoa1.setNome(scanner.next());
+        System.out.println("Digite sua Idade Pessoa 1: ");
+        pessoa1.setIdade(scanner.nextInt());
 
         Pessoa pessoa2 = new Pessoa();
-        pessoa2.setNome("Ruth");
-        pessoa2.setIdade(28);
+        System.out.println("Digite o Nome Pessoa 2: ");
+        pessoa2.setNome(scanner.next());
+        System.out.println("Digite sua Idade Pessoa 2: ");
+        pessoa2.setIdade(scanner.nextInt());
 
         Pessoa pessoa3 = new Pessoa();
-        pessoa3.setNome("Teste");
-        pessoa3.setIdade(88);
+        System.out.println("Digite o Nome Pessoa 3: ");
+        pessoa3.setNome(scanner.next());
+        System.out.println("Digite sua Idade Pessoa 3: ");
+        pessoa3.setIdade(scanner.nextInt());
 
         //2.
         ArrayList<Pessoa> listaDePessoas = new ArrayList<>();
@@ -23,7 +29,7 @@ public class Main {
         listaDePessoas.add(pessoa2);
         listaDePessoas.add(pessoa3);
         System.out.println("Tamanho Lista: " + listaDePessoas.size());
-        System.out.println("Primeiro da fila " + listaDePessoas.get(1).getNome());
+        System.out.println("Primeiro da fila " + listaDePessoas.get(0).getNome());
         System.out.println(listaDePessoas);
 
     }
