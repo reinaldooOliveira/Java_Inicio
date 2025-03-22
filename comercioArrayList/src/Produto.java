@@ -3,6 +3,15 @@ public class Produto {
     protected double preco;
     protected int quantidade;
 
+    @Override
+    public String toString() {
+        return "Produto{" +
+                "nome='" + nome + '\'' +
+                ", preco=" + preco +
+                ", quantidade=" + quantidade +
+                '}';
+    }
+
     public Produto(String nome, double preco, int quantidade) {
         setNome(nome);
         setPreco(preco);
