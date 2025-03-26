@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
@@ -10,7 +11,7 @@ public class Main {
                 86, "25/03/2025");
 
 
-        ArrayList<Produto> listaDeProdutos = new ArrayList<>();
+        List<Produto> listaDeProdutos = new ArrayList<>();
         listaDeProdutos.add(produto1);
         listaDeProdutos.add(perecivel);
         listaDeProdutos.add(produto2);
