@@ -13,4 +13,15 @@ public class Cachorro extends Animal {
                     String comunicar) {
         super(membros, classeAnimal, movimenta, comunicar);
     }
+
+    @Override
+    public String toString() {
+        return "Animal{" +
+                " nome " + nome +
+                " membros= " + membros +
+                ", classeAnimal='" + classeAnimal + '\'' +
+                ", movimenta='" + movimenta + '\'' +
+                ", comunicar='" + comunicar + '\'' +
+                '}';
+    }
 }
