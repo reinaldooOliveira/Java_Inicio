@@ -11,14 +11,16 @@ public class Cachorro extends Animal {
 
     public Cachorro(String nome, int membros, String classeAnimal, String movimenta,
                     String comunicar) {
+
         super(membros, classeAnimal, movimenta, comunicar);
+        this.nome = nome;
     }
 
     @Override
     public String toString() {
-        return "Animal{" +
+        return "Cachorro{" +
                 " nome " + nome +
-                " membros= " + membros +
+                ", membros= " + membros +
                 ", classeAnimal='" + classeAnimal + '\'' +
                 ", movimenta='" + movimenta + '\'' +
                 ", comunicar='" + comunicar + '\'' +

@@ -11,13 +11,14 @@ public class cobra extends Animal{
 
     public cobra(boolean peconha, int membros, String classeAnimal, String movimenta, String comunicar) {
         super(membros, classeAnimal, movimenta, comunicar);
+        this.peconha =peconha;
     }
 
     @Override
     public String toString() {
-        return "Animal{" +
-                " peconha"+ peconha +
-                " membros= " + membros +
+        return "Cobra{" +
+                " peconha "+ peconha +
+                ", membros= " + membros +
                 ", classeAnimal=' " + classeAnimal + '\'' +
                 ", movimenta=' " + movimenta + '\'' +
                 ", comunicar=' " + comunicar + '\'' +
