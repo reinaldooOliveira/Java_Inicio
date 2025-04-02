@@ -45,7 +45,7 @@ public class Main {
              valrsum += listDeProdutos.get(opcao).preco;
         }
         double precoMedio = valrsum / listDeProdutos.size();
-        System.out.println("Preço Médio dos Produtos: %.2f ".formatted(precoMedio));*/
+        System.out.println("Preço Médio dos Produtos: %.2f ".formatted(precoMedio));
 
 
         Scanner scanner = new Scanner(System.in);
@@ -60,8 +60,24 @@ public class Main {
         listaDeFormas.add(quadrado);
         for(Forma forma : listaDeFormas){
             System.out.println("Área: %.2f ".formatted(forma.calcularArea()));
+        }*/
+
+        ContaBancaria conta1 = new ContaBancaria(310, 1544);
+        ContaBancaria conta2 = new ContaBancaria(210, 2000);
+        ContaBancaria conta3 = new ContaBancaria(250, 500);
+
+        List<ContaBancaria> listaContas = new ArrayList<>();
+        listaContas.add(conta1);
+        listaContas.add(conta2);
+        listaContas.add(conta3);
+
+        ContaBancaria contaMaiorSaldo = listaContas.get(0);
+        for (ContaBancaria conta : listaContas) {
+            if (conta.getSaldoConta() > contaMaiorSaldo.getSaldoConta()) {
+                contaMaiorSaldo = conta;
+            }
         }
-
-
+        System.out.println("A Conta com Maior Saldo é " + contaMaiorSaldo.getNumConta() +
+                " com valor de " + contaMaiorSaldo.getSaldoConta());
     }
 }
