@@ -35,11 +35,11 @@ public class Principal {
         Collections.sort(cartao.getCompras());
         int i = 1;
         for (Compra c : cartao.getCompras()){
-            System.out.println( i+"-" + c.getDescricao() + " - " + "$" +c.getValor());
+            System.out.println( i+" - " + c.getDescricao() + " - " + "$" +c.getValor());
             i++;
         }
 
         System.out.println("\n*****************************************************");
-        System.out.println("\nSaldo do Cartão: " +cartao.getSaldo());
+        System.out.println("\nSaldo do Cartão: $" +cartao.getSaldo());
     }
 }
