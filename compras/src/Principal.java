@@ -32,6 +32,7 @@ public class Principal {
         }
         System.out.println("******************************************************");
         System.out.println("COMPRAS REALIZADAS:\n");
+        Collections.sort(cartao.getCompras());
         int i = 1;
         for (Compra c : cartao.getCompras()){
             System.out.println( i+"-" + c.getDescricao() + " - " + "$" +c.getValor());
