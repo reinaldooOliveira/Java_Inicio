@@ -10,7 +10,7 @@ public class Main {
         int qtdTentativa = 1;
 
 
-        while (qtdTentativa <=5){
+        while (qtdTentativa != -1){
             int random = new Random().nextInt(100);
             System.out.println("------------------------------------------------------");
             System.out.println("Ja foram %d Tentativas ".formatted(qtdTentativa));
